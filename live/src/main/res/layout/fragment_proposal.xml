@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/proposalRootView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/gradient_background_share"
+             android:clickable="true"
+             android:focusable="true">
+
+    <pc.dd.liveapp.ui.widget.OnlyVerticalSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_normal"
+                android:gravity="center"
+                android:text="@string/demandes_de_participation"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <pc.dd.liveapp.ui.widget.MyRecycleView
+                android:layout_weight="1"
+                android:id="@+id/listViewOutPartyesRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_normal"
+                android:gravity="center"
+                android:text="@string/mes_soire_s_propos_es"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <pc.dd.liveapp.ui.widget.MyRecycleView
+                android:layout_weight="1"
+                android:id="@+id/listViewInPartyesRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </pc.dd.liveapp.ui.widget.OnlyVerticalSwipeRefreshLayout>
+</FrameLayout>

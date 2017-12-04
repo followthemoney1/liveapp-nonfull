@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:fitsSystemWindows="true"
+                android:layout_width="1500px"
+                android:layout_height="2400px">
+
+    <ImageView
+        android:layout_width="@dimen/size_comment"
+        android:layout_height="@dimen/size_comment"
+        android:layout_margin="@dimen/spacing_large"
+        android:src="@drawable/ic_icon_pdf"/>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/spacing_large"
+    android:layout_marginLeft="1140px"
+    android:gravity="end"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/pdfName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live SASU"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:id="@+id/cityPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adress"/>
+
+    <TextView
+        android:id="@+id/streetPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adcress second"/>
+
+    <TextView
+        android:id="@+id/francePdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="france"
+        android:textAllCaps="true"/>
+
+    <TextView
+        android:id="@+id/numberPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8066 21 77 551"/>
+</LinearLayout>
+</RelativeLayout>

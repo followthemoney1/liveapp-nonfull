@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">LiveApp</string>
+    <string name="ajouter_une_photo">Ajouter une photo</string>
+    <string name="nom">nom</string>
+    <string name="pr_nom">PRéNOM</string>
+    <string name="adresse">adresse</string>
+    <string name="date_de_naissance">DATE DE NAISSANCE</string>
+    <string name="propos_de_moi">à propos de moi : </string>
+    <string name="_200_caract_res_max"> (200 caractères max)</string>
+    <string name="inscription">inscription</string>
+
+    <string name="facebook_app_id">1264330710338439</string>
+    <string name="fb_login_protocol_scheme">fb1264330710338439</string>
+
+    <string name="parse_server_url">https://theliveapp.herokuapp.com/parse/</string>
+    <string name="parse_app_id">jozwweQ0lMQD</string>
+
+    <string name="se_connecter">SE CONNECTER</string>
+    <string name="a_propos">à PROPOS:</string>
+    <string name="type_de_soir_e">TYPE DE SOIRÉE</string>
+    <string name="nombre_de_places">NOMBRE DE PLACES</string>
+    <string name="publier">publier</string>
+    <string name="semi_priv_e">SEMI-PRIVÉE</string>
+    <string name="priv_e">PRIVÉE</string>
+    <string name="elements_compris_dans_le_prix">ELEMENTS COMPRIS DANS LE PRIX</string>
+    <string name="rejoindre">rejoindre</string>
+    <string name="annuler">annuler</string>
+    <string name="entrez_l_adresse_compl_te">ENTREZ L\'ADRESSE COMPLĖTE</string>
+    <string name="entrez_la_ville">ENTREZ LA VILLE</string>
+    <string name="title_payment_option_start">VOUS SOUHAITEZ PARTICIPER À LA SOIRÉE
+ORGANISÉE PAR </string>
+    <string name="title_payment_option_end"> QUI INCLUT UNE
+PARTICIPATION DE </string>
+    <string name="payer">payer</string>
+    <string name="text_after_dialog_window_payment_create_event">veillez ajouter vorte carte de crĖdit pour vous permettre de recevoir votre argent aprĖs l\'ĖvĖnement</string>
+    <string name="text_after_dialog_window_payment">VOUS SEREZ AUTOMATIQUEMENT DÉBITÉ SI L’ORGANISATEUR ACCEPTE VOTRE PARTICIPATION.</string>
+    <string name="num_ro_au_dos_de_votre_carte_de_cr_dit">Numéro au \ndos de votre \ncarte de crédit</string>
+    <string name="mes_soire_s_propos_es">mes soireés proposées</string>
+    <string name="demandes_de_participation">demandes de participation</string>
+    <string name="num_ro_de_carte">Numėro de carte</string>
+    <string name="ann_e">Annėe</string>
+    <string name="mois">Mois</string>
+    <string name="nom_du_titulaire_de_la_carte">Nom du titulaire de la carte</string>
+    <string name="rechercher_un_evenement">RECHERCHER UN EVENEMENT</string>
+    <string name="r_pondre_la_demande">RĖPONDRE Ȧ LA DEMANDE</string>
+    <string name="refuser">refuser</string>
+    <string name="accepter">accepter</string>
+
+    <string name="toast_status_of_this_user_is_not_pending">Status of this user is not pending</string>
+    <string name="toast_you_must_fielt_first_name">You must fill in the field first name.</string>
+    <string name="toast_you_must_fill_last_name">You must fill in the field last name user.</string>
+    <string name="toast_you_must_fill_adress">You must fill in the field address.</string>
+    <string name="toast_you_must_fill_about">You must fill in the field about.</string>
+    <string name="toast_you_must_upload_image">You must upload image.</string>
+    <string name="toast_cant_load_image">Can\'t load image</string>
+    <string name="toast_you_must_fill_party_name">You must fill in the field party name.</string>
+    <string name="toast_must_upload_image">You must upload image.</string>
+    <string name="toast_must_fill_places">You must fill in the field places.</string>
+    <string name="toast_must_fill_price">You must fill in the field price.</string>
+    <string name="toast_while_location_get">While a bit</string>
+    <string name="toast_date_is_wrong">Date is wrong</string>
+    <string name="toast_location_event_is_wrong">Location event is wrong</string>
+    <string name="toast_city_is_wrong">City is wrong</string>
+    <string name="toast_address_is_wrong">Address is wrong</string>
+    <string name="toast_you_cant_leave_you_party">You can\'t leave you party</string>
+    <string name="toast_event_create_success">Event create successfully</string>
+    <string name="toast_email_is_wrong_facebook">Email is wrong</string>
+    <string name="toast_card_number_is_not_valid">This card number is not valid</string>
+    <string name="toast_facebook_login_canceled">Facebook login canceled</string>
+    <string name="toast_string_must_have_more_numbers">The string year must be at least 2 characters</string>
+    <string name="toast_string_year_must_be_later_than_this_year">The string year must be later than this year</string>
+    <string name="toast_string_month_is_incorrect">The string month is incorrect</string>
+    <string name="dialog_dismiss_event">Dissmiss event?</string>
+    <string name="dialog_dismiss_event_text">Cachez-vous cet evenement?</string>
+    <string name="dialog_write_email_title">Write email</string>
+    <string name="toast_email_save_success">Email update success</string>
+    <string name="invitez_des_amis_facebook_venir_avec_vous">Invitez des amis Facebook ȧ venir avec vous</string>
+    <string name="inviter">inviter</string>
+    <string name="text_inive_push">vous invite à</string>
+    <string name="toast_cant_load_you_friend_list">Can\'t load you fiend list</string>
+
+
+    <array name="month_array">
+        <item name="janvier">janvier</item>
+        <item name="février">février</item>
+        <item name="mars">mars</item>
+        <item name="avril">avril</item>
+        <item name="mai">mai</item>
+        <item name="juin">juin</item>
+        <item name="juillet">juillet</item>
+        <item name="août">août</item>
+        <item name="septembre">septembre</item>
+        <item name="octobre">octobre</item>
+        <item name="novembre">novembre</item>
+        <item name="décembre">décembre</item>
+    </array>
+
+    <array name="week_array">
+        <item name="lundi">lundi</item>
+        <item name="mardi">mardi</item>
+        <item name="mercredi">mercredi</item>
+        <item name="jeudi">jeudi</item>
+        <item name="vendredi">vendredi</item>
+        <item name="samedi">samedi</item>
+        <item name="dimanche">dimanche</item>
+    </array>
+</resources>

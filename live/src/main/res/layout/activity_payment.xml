@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<RelativeLayout
+    android:id="@+id/rootRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <FrameLayout
+        android:background="@drawable/gradient_background_share"
+        android:alpha="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/relativeContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/paymentDialogContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:layout_marginBottom="@dimen/padding_normal"
+            />
+
+        <TextView
+            android:id="@+id/paymentText"
+            android:paddingTop="@dimen/padding_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paymentDialogContainer"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:gravity="center"
+            android:text="@string/text_after_dialog_window_payment"
+            android:textColor="@color/white"/>
+
+        <android.support.v7.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/cardViewInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/paymentDialogContainer"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_large"
+            app:cardBackgroundColor="@color/white_for_card_btn"
+            app:cardCornerRadius="8dp"
+            >
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/cardInviteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginTop="2dp"
+                android:text="@string/inviter"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <include layout="@layout/loading"/>
+
+</RelativeLayout>
+</LinearLayout>

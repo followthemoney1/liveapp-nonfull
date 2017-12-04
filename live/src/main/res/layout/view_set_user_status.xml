@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/gradient_background_share"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/userImageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_pick_size"
+            android:scaleType="centerCrop"/>
+        <RelativeLayout
+            android:background="@color/black_alpha_60"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding_normal"
+            android:paddingBottom="@dimen/padding_normal"
+            android:layout_alignBottom="@id/userImageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/nameUser"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:text="PAULINE HARIVEL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/userAge"
+                android:paddingLeft="@dimen/spacing_medium"
+                android:layout_toRightOf="@id/nameUser"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textAllCaps="true"
+                android:text="20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/userLocation"
+                android:layout_below="@id/nameUser"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textAllCaps="true"
+                android:text="Courbevoi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_large">
+
+        <LinearLayout
+            android:id="@+id/declineUser"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/spacing_xlarge"
+                android:layout_height="@dimen/spacing_xlarge"
+                android:src="@drawable/circle_scg"
+                android:tint="@color/red_status"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:text="@string/refuser"
+                android:textAllCaps="true"
+                android:textColor="@color/red_status"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acceptUser"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/spacing_xlarge"
+                android:layout_height="@dimen/spacing_xlarge"
+                android:src="@drawable/circle_scg"
+                android:tint="@color/green_status"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:text="@string/accepter"
+                android:textAllCaps="true"
+                android:textColor="@color/green_status"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

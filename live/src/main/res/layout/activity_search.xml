@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:autofit="http://schemas.android.com/tools"
+                android:fitsSystemWindows="true">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:id="@+id/circularRevalAnimationRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/bkg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_size"
+            android:alpha="0.7"
+            android:background="@drawable/gradient_background_share"/>
+
+        <ImageView
+            android:id="@+id/closeSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_normal"
+            android:src="@drawable/cross"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_size">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_normal"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="@dimen/padding_normal"
+                android:gravity="left"
+                android:ellipsize="end"
+                android:textAlignment="2"
+                android:inputType="text"
+                android:singleLine="true"
+                android:maxLength="18"
+                android:paddingRight="@dimen/padding_normal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                android:focusable="true"
+                android:theme="@style/EditTextSearch">
+                <requestFocus />
+                </EditText>
+
+
+            <TextView
+                android:id="@+id/searchHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/searchEditText"
+                android:gravity="center"
+                android:hint="@string/rechercher_un_evenement"
+                android:paddingTop="@dimen/padding_normal"
+                android:layout_marginTop="-4dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/bkg"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/padding_normal"
+           >
+
+            <LinearLayout
+                android:alpha="0.5"
+                android:id="@+id/layoutPrix"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_medium"
+                android:background="@drawable/line_search"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/spacing_micro"
+                    android:paddingTop="@dimen/spacing_micro"
+                    android:text="prix"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:autoSizeTextType="uniform"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:alpha="0.5"
+                android:id="@+id/layoutDistance"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/spacing_medium"
+                android:background="@drawable/line_search"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:autoSizeTextType="uniform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/spacing_micro"
+                    android:paddingTop="@dimen/spacing_micro"
+                    android:text="distance"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:alpha="0.5"
+                android:id="@+id/layoutDemandes"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/spacing_medium"
+                android:background="@drawable/line_search"
+                android:gravity="center">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/spacing_micro"
+                    android:paddingTop="@dimen/spacing_micro"
+                    android:singleLine="true"
+                    android:text="plus demandÈes"
+                    android:textAllCaps="true"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

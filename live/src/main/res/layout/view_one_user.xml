@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@drawable/gradient_background_share"
+        android:layout_margin="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<ImageView
+    android:scaleType="centerCrop"
+    android:id="@+id/oneUserImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/statusUserImage"
+        android:src="@drawable/circle_scg"
+        android:visibility="gone"
+        android:layout_margin="@dimen/spacing_micro"
+        android:layout_width="@dimen/fab_radius"
+        android:layout_height="@dimen/fab_radius"/>
+        <LinearLayout
+            android:id="@+id/bottomLineUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/oneUserImage"
+            android:background="@color/black_alpha_80"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:paddingRight="@dimen/padding_small">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nameUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAUSLE JFLLJ"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/ageUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/spacing_medium"
+                    android:layout_toRightOf="@id/nameUser"
+                    android:gravity="left"
+                    android:text="20"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textStyle="italic"/>
+            </RelativeLayout>
+
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/addressUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Courbevoe"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

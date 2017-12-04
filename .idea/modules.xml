@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\LiveApp.iml" filepath="C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\LiveApp.iml" />
+      <module fileurl="file://C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\liveapp\app.iml" filepath="C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\liveapp\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leaditeam-liveapp-109691c4fd0b.iml" filepath="$PROJECT_DIR$/leaditeam-liveapp-109691c4fd0b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/live/live.iml" filepath="$PROJECT_DIR$/live/live.iml" />
+      <module fileurl="file://C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\live\live.iml" filepath="C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\live\live.iml" />
+      <module fileurl="file://C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\live\liveapp.iml" filepath="C:\Users\dd.pc\Desktop\leaditeam-liveapp-109691c4fd0b\live\liveapp.iml" />
+    </modules>
+  </component>
+</project>

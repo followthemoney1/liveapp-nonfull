@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/gradient_background_share"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background_share"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageCloseDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_close_white_24dp"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_large"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titlePaymentDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/text_after_dialog_window_payment_create_event"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_alpha_60"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_micro">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:src="@drawable/master_card_icon"
+                android:tint="@color/white"/>
+
+            <ImageView
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                android:layout_marginTop="@dimen/spacing_micro"
+                android:src="@drawable/visa_icon"
+                android:tint="@color/white"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_huge"
+            android:layout_marginRight="@dimen/spacing_huge"
+            android:layout_marginTop="@dimen/spacing_normal"
+            app:cardBackgroundColor="@color/white">
+
+            <EditText
+                android:id="@+id/cardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding_small"
+                android:background="@null"
+                android:digits="0123456789 "
+                android:gravity="left"
+                android:hint="@string/num_ro_de_carte"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:maxLength="19"
+                android:nextFocusDown="@+id/lastNameUserRegistration"
+                android:singleLine="true"
+                android:textColorHint="@color/black_alpha_80"
+                android:textCursorDrawable="@drawable/text_cursor_drawable"
+                android:textSize="13sp">
+            </EditText>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginLeft="@dimen/spacing_huge"
+            android:layout_marginRight="@dimen/spacing_huge"
+            android:layout_marginTop="@dimen/padding_large"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_micro"
+                android:layout_marginRight="@dimen/padding_small"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/monthCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="@string/mois"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:nextFocusDown="@+id/lastNameUserRegistration"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black_alpha_80"
+                    android:textCursorDrawable="@drawable/text_cursor_drawable"
+                    android:textSize="13sp">
+                </EditText>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/yearCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="@string/ann_e"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:nextFocusDown="@+id/lastNameUserRegistration"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black_alpha_80"
+                    android:textCursorDrawable="@drawable/text_cursor_drawable"
+                    android:textSize="13sp">
+                </EditText>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_xlarge"
+            android:layout_marginRight="@dimen/spacing_xlarge"
+            android:layout_marginTop="@dimen/padding_normal"
+            app:cardBackgroundColor="@color/white">
+
+            <EditText
+                android:id="@+id/cardOwnerName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding_small"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="@string/nom_du_titulaire_de_la_carte"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusDown="@+id/lastNameUserRegistration"
+                android:singleLine="true"
+                android:textColorHint="@color/black_alpha_80"
+                android:textCursorDrawable="@drawable/text_cursor_drawable"
+                android:textSize="13sp">
+            </EditText>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardViewCvvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/white">
+
+                <EditText
+                    android:id="@+id/cardCvvNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/padding_small"
+                    android:background="@null"
+                    android:gravity="center_horizontal"
+                    android:hint="CVV"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:nextFocusDown="@+id/paymentButton"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black_alpha_80"
+                    android:textCursorDrawable="@drawable/text_cursor_drawable"
+                    android:textSize="13sp">
+                </EditText>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_toRightOf="@id/cardViewCvvNumber"
+                android:text="@string/num_ro_au_dos_de_votre_carte_de_cr_dit"
+                android:textColor="@color/white"
+                android:textSize="10sp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/paymentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/padding_large"
+            android:background="@drawable/gradient_background_share">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/payer"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:style="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/gradient_background_share"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_pick_size"
+        android:background="@color/black_image_alpha">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.4"
+            android:text="@string/ajouter_une_photo"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/imageCreateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_pick_size"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imageArrowBack"
+            android:padding="@dimen/padding_normal"
+            android:src="@drawable/arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <pc.dd.liveapp.ui.widget.VerticalScrollView
+        style="@style/ScrollBarThumb"
+        android:id="@+id/verticalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="6dp">
+
+        <LinearLayout
+            android:id="@+id/rootContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOM DE LA SOIRÉE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xhuge"
+                    android:layout_marginRight="@dimen/spacing_xhuge"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:background="@color/black_alpha">
+
+                    <EditText
+                        android:id="@+id/nameEventCreation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@+id/addressEditTextFull"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="12sp">
+
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_de_soir_e"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_normal"
+                    android:layout_marginRight="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    >
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/privateTypeRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_small"
+                            android:layout_marginRight="@dimen/padding_small"
+                            android:background="@drawable/radio_button_background_drawable"
+                            android:button="@android:color/transparent"
+                            android:paddingLeft="24dp"
+                            android:paddingRight="24dp"
+                            android:text="@string/priv_e"
+                            android:textColor="@color/white"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/publicTypeRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/padding_small"
+                            android:layout_marginRight="@dimen/padding_small"
+                            android:background="@drawable/radio_button_background_drawable"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:text="@string/semi_priv_e"
+                            android:textColor="@color/white"
+                            />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adresse"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xlarge"
+                    android:layout_marginRight="@dimen/spacing_xlarge"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:background="@color/black_alpha">
+
+                    <EditText
+                        android:id="@+id/addressEditTextFull"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="@string/entrez_l_adresse_compl_te"
+                        android:textColorHint="@color/white_alpha_60"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:nextFocusDown="@+id/addressEditTextNotFull"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true">
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xlarge"
+                    android:layout_marginRight="@dimen/spacing_xlarge"
+                    android:layout_marginTop="@dimen/spacing_micro"
+                    android:background="@color/black_alpha">
+
+                    <EditText
+                        android:id="@+id/addressEditTextNotFull"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:textColorHint="@color/white_alpha_60"
+                        android:hint="@string/entrez_la_ville"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:nextFocusDown="@+id/aboutEditTextRegistration"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true">
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_normal"
+                    android:text="@string/date_de_naissance"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <pc.dd.liveapp.ui.widget.MyDatePicker
+                        android:id="@+id/myDatePicker"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:layout_marginTop="@dimen/padding_large"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/propos_de_moi"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/spacing_micro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_200_caract_res_max"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xlarge"
+                    android:layout_marginRight="@dimen/spacing_xlarge"
+                    android:layout_marginTop="@dimen/padding_normal"
+                    android:background="@color/black_alpha">
+
+                    <EditText
+                        android:overScrollMode="always"
+                        android:id="@+id/aboutEditTextRegistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_comment"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:maxLength="200"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:nextFocusDown="@+id/nombrePlaces"
+                        android:imeOptions="actionNext">
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_normal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombre_de_places"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_xhuge"
+                        android:layout_marginRight="@dimen/spacing_xhuge"
+                        android:layout_marginTop="@dimen/spacing_normal"
+                        android:background="@color/black_alpha">
+
+                        <EditText
+                            android:id="@+id/placesEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:nextFocusDown="@+id/prix"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="12sp">
+
+                        </EditText>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_normal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="prix"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_xhuge"
+                        android:layout_marginRight="@dimen/spacing_xhuge"
+                        android:layout_marginTop="@dimen/spacing_normal"
+                        android:background="@color/black_alpha">
+
+                        <EditText
+                            android:id="@+id/priceEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="8"
+                            android:nextFocusDown="@+id/addressEditTextNotFull"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="12sp">
+
+                        </EditText>
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/spacing_micro"
+                            android:src="@drawable/ic_icon_euro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/spacing_normal"
+                    android:layout_marginRight="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/padding_normal"
+                    android:textColor="@color/white"
+                    android:text="@string/elements_compris_dans_le_prix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <GridLayout
+                    android:layout_marginTop="@dimen/padding_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="3"
+                    android:foregroundGravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/hasCocktail"
+                        android:tint="@color/white"
+                        android:alpha="0.3"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:src="@drawable/icon_create_event_1"/>
+
+                    <ImageView
+                        android:id="@+id/hasSwim"
+                        android:alpha="0.3"
+                        android:tint="@color/white"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:src="@drawable/icon_create_event_2"/>
+
+                    <ImageView
+                        android:id="@+id/hasFood"
+                        android:alpha="0.3"
+                        android:tint="@color/white"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:src="@drawable/icon_create_event_3"/>
+
+                    <ImageView
+                        android:id="@+id/hasSleep"
+                        android:alpha="0.3"
+                        android:tint="@color/white"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:src="@drawable/icon_create_event_4"/>
+
+                    <ImageView
+                        android:id="@+id/hasDj"
+                        android:alpha="0.3"
+                        android:tint="@color/white"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:src="@drawable/icon_create_event_5"/>
+
+                    <ImageView
+                        android:id="@+id/hasMusic"
+                        android:alpha="0.3"
+                        android:tint="@color/white"
+                        android:layout_width="@dimen/fab_size"
+                        android:layout_height="@dimen/fab_size"
+                        android:layout_margin="@dimen/spacing_normal"
+                        android:src="@drawable/icon_create_event_6"/>
+                </GridLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardViewSaveEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_xlarge"
+                    app:cardBackgroundColor="@color/white_for_card_btn"
+                    app:cardCornerRadius="8dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/temp_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="@dimen/spacing_xlarge"
+                        android:layout_marginRight="@dimen/spacing_xlarge"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/publier"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </pc.dd.liveapp.ui.widget.VerticalScrollView>
+</LinearLayout>

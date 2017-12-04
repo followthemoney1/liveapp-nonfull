@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/rootLinearLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:padding="@dimen/spacing_micro">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small">
+
+        <ImageView
+            android:id="@+id/visitorsImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/visitors"
+            android:tint="@color/black_alpha_60"/>
+
+        <TextView
+            android:id="@+id/howMuchPeopleHaveOnParty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/spacing_micro"
+            android:layout_toRightOf="@id/visitorsImage"
+            android:text="1"
+            android:textColor="@color/red_status"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/howMuchPeopleMustBe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/howMuchPeopleHaveOnParty"
+            android:text="1"
+            android:textColor="@color/black_alpha_60"
+            android:textStyle="italic"/>
+
+        <ImageView
+            android:id="@+id/circleStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/spacing_micro"
+            android:src="@drawable/ic_fiber_manual_record_black_24dp"
+            android:tint="@color/black_alpha_60"/>
+
+        <TextView
+            android:id="@+id/statusOfParty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/spacing_micro"
+            android:layout_toLeftOf="@id/circleStatus"
+            android:text="wefwef"
+            android:textAllCaps="true"
+            android:textStyle="italic"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background_share"
+            android:scaleType="centerCrop"/>
+
+
+        <TextView
+            android:maxLength="10"
+            android:id="@+id/addressEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:text="Courbelove"
+            android:textColor="@color/white"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:maxLength="16"
+            android:id="@+id/nameParty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/addressEditText"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:text="SOIRE ELECTRO"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:textAllCaps="true"
+            android:textStyle="italic"
+            android:id="@+id/priceParty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:text="15"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</LinearLayout>
